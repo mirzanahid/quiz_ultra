@@ -7,36 +7,36 @@ import { Container } from 'react-bootstrap';
 
 const Quiz = () => {
     const quizzes = useLoaderData();
-    const {id, name, questions} = quizzes.data;
-  
+    const {name, questions } = quizzes.data;
+
+
+   
+
     return (
         <div>
             <div className='quiz-bread'>
-                <Breadcrumb>
-                    <Breadcrumb.Item href="/">Topics</Breadcrumb.Item>
-                    <Breadcrumb.Item href="/Quiz">
-                        Quiz
-                    </Breadcrumb.Item>
-                    <Breadcrumb.Item active>Data</Breadcrumb.Item>
-                </Breadcrumb>
+                <Container>
+                    <p>Quiz Of <span>{name}</span></p>
+                </Container>
             </div>
-         <Container>
-         <div className="quiz-container">
-            <div className="quiz-question-container">
-            {
-           
-           questions.map((question, index) => <SingleQuiz key={question.id}  question={question} number={index}></SingleQuiz>)
-          }
-            </div>
-            <div className="quiz-result-container">
-                <div className="quiz-resl">
-                    <h3>Quiz Result</h3>
-                    <p>Correct Ans:</p>
-                    <p>Wrong Ans:</p>
+
+            <Container>
+                <div className="quiz-container">
+                    <div className="quiz-question-container">
+                        {
+
+                            questions.map((question, index) => <SingleQuiz key={question.id} question={question} number={index}></SingleQuiz>)
+                        }
+                    </div>
+                    <div className="quiz-result-container">
+                        <div className="quiz-res">
+                            <h3 className='quiz-res-heading'>Quiz Results:</h3>
+                            <p className='quiz-correct'>Correct Ans:</p>
+                            <p className='quiz-wrong'>Wrong Ans:</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-          </div>
-         </Container>
+            </Container>
         </div>
     );
 };

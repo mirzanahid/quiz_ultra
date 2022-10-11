@@ -1,9 +1,9 @@
 import React from 'react';
 import './QuizOption.css'
 
-const QuizOption = ({ option, number }) => {
-
-    const num = number;
+const QuizOption = (props) => {
+      const { option, number, handler } = props;
+     const num = number;
     const indexToAlpha = (num = 1) => {
         const A = 'A'.charCodeAt(0);
         let numberToCharacter = number => {
@@ -14,8 +14,8 @@ const QuizOption = ({ option, number }) => {
     const alphabet = indexToAlpha(num);
 
     return (
-        <div className='quiz-options'>
-            
+        <div className='quiz-options' onClick={()=>handler(option)} >
+
             <p><span className='quiz-alphabet'>{alphabet}</span> {option}</p>
 
         </div>
