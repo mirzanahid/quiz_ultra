@@ -1,6 +1,7 @@
 .quiz-navbar {
-    background: #9755D1;
-    height: 60px;
+    /* background: #9755D1; */
+    background: #cf95ec;
+    height: 80px;
 }
 
 .quiz-navbar a {
@@ -21,12 +22,12 @@
 
 .quiz-navbar .active {
     background: #ffffff;
-    color: #9755D1;
+    color: #cf95ec;
     border-radius: 2px;
 }
 
 .quiz-navbar .active:hover {
-    color: #9755D1;
+    color: #cf95ec;
 }
 
 .quiz-navbar .logo {

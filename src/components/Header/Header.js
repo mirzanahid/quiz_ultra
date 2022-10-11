@@ -15,7 +15,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink className={({isActive}) =>  isActive ? 'active': undefined} to={'/'} >TOPICS</NavLink>
+            <NavLink className={({isActive}) =>  isActive ? 'active': undefined} to={'/'} end>TOPICS</NavLink>
             <NavLink className={({isActive}) => isActive ? 'active': undefined}  to={'/statistics'} >STATISTICS</NavLink>
             <NavLink className={({isActive}) => isActive ? 'active': undefined} to={'/blog'} >BLOG</NavLink>
 
