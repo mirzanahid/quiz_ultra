@@ -1,0 +1,9 @@
+.quiz-bread{
+    background: #b0d861;
+    height: 250px;
+}
+
+.quiz-container{
+    display: flex;
+    justify-content: space-between;
+}
