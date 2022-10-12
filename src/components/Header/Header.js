@@ -3,15 +3,16 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../Images/logo.svg'
 
-import './Header.css'
+import './Header.css';
 
 const Header = () => {
     return (
         <div>
       <Navbar className='quiz-navbar' expand="lg">
       <Container>
-        <Navbar.Brand > <Link to={'/'} className='logo'>Quiz Ultra</Link> </Navbar.Brand>
+        <Navbar.Brand > <Link to={'/'} className='logo'> <img className='logo-icon' src={logo} alt="" /> Quiz Ultra</Link> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

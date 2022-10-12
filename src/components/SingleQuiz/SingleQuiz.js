@@ -1,38 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
+import { Link, NavLink } from 'react-router-dom';
 import QuizOption from '../QuizOption/QuizOption';
 import './SingleQuiz.css'
-
-
 
 
 const SingleQuiz = ({ question, number }) => {
     const options = question.options;
     const rightAns = question.correctAnswer;
-    console.log(question)
-
-    const getAns = (ans) => {
-        if (ans) {
-            const result = options.find(option => option);
-            if (result === ans) {
-                console.log('right')
-            }
-
-        }
-
-    }
-
-
-
-    const num = number;
-    const indexToAlpha = (num = 1) => {
-        const A = 'A'.charCodeAt(0);
-        let numberToCharacter = number => {
-            return String.fromCharCode(A + number);
-        };
-        return numberToCharacter(num);
-    };
-    const alphabet = indexToAlpha(num);
+    const [disabled, setDisabled] = useState(false);
     return (
         <div>
             <Container>
@@ -43,14 +19,13 @@ const SingleQuiz = ({ question, number }) => {
                     </div>
                     <div >
                         {
-                            // options.map((option, idx) => <QuizOption key={idx} option={option} number={idx} handler={getAns}></QuizOption>)
-                            options.map(option => {
-                                <div className='quiz-options' onClick={() => getAns(option)} >
-
-                                    <p><span className='quiz-alphabet'>{alphabet}</span> {option}</p>
-
-                                </div>
-                            })
+                            options.map((option, idx) => <QuizOption
+                                key={idx}
+                                option={option}
+                                number={idx}
+                                rightAns={rightAns}
+                                disabled={disabled}
+                                setDisabled={setDisabled}></QuizOption>)
                         }
                     </div>
                 </div>

@@ -31,8 +31,13 @@
 }
 
 .quiz-navbar .logo {
-    font-family: Roboto;
+    font-family: 'Ultra';
     font-size: 24px;
     font-weight: 500;
     color: #ffffff;
+}
+
+.quiz-navbar .logo-icon{
+   width: 40px;
+   height: 40px;
 }

@@ -1,6 +1,19 @@
 .quiz-options {
     margin-bottom: 30px;
     cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+   
+}
+
+.eye-icon {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    font-size: 20px;
+    color: #BF40BF;
+    cursor: pointer;
 }
 
 .quiz-options p {
@@ -31,15 +44,24 @@
    
 }
 
-.quiz-options:hover P{
-    color: #ffffff;
+.quiz-options .active{
     background-color: #b0d861;
-}
-.quiz-options:hover  .quiz-alphabet{
-    color: #BF40BF;
-    background: #ffffff;
+    color: #ffffff
 
 }
 
+.quiz-options .active .quiz-alphabet {
+    background-color: #ffffff;
+    color: #b0d861;
+}
 
+.quiz-options  .wrong {
+    background-color: red;
+    color: #ffffff
+}
+
+.quiz-options .wrong .quiz-alphabet {
+    background-color: #ffffff;
+    color: red;
+}
 

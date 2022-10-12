@@ -1,7 +1,7 @@
 .single-topic{
     background: #b0d861;
     border: 2px solid #f3f3f3;
-    border-radius: 5px;
+    border-radius: 10px;
     
  
 }
@@ -43,5 +43,5 @@
     border: none;
     color: #fff;
     padding: 8px 30px;
-    border-radius: 2px;
+    border-radius: 5px;
 }

@@ -31,6 +31,7 @@ const Quiz = () => {
                     <div className="quiz-result-container">
                         <div className="quiz-res">
                             <h3 className='quiz-res-heading'>Quiz Results:</h3>
+                            <p className='quiz-correct'>Total Quiz:</p>
                             <p className='quiz-correct'>Correct Ans:</p>
                             <p className='quiz-wrong'>Wrong Ans:</p>
                         </div>
