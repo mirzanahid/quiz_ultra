@@ -1,13 +1,25 @@
-.chart-container{
- text-align: center;
+.chart-container {
+    text-align: center;
 }
-.chart{
+
+.chart {
     margin: 60px auto 20px auto;
     width: 50%;
     height: 300px;
 }
-.recharts-text{
-    font-family: 'Mitr',sans-serif;
+
+.recharts-text {
+    font-family: 'Mitr', sans-serif;
     font-size: 20px;
     color: #2f2e29;
+}
+
+/* responsive for mobile device  */
+
+@media only screen and (max-width: 575.98px) {
+    .chart {
+        margin: 60px auto 20px -30px;
+        width: auto;
+        height: 305px;
+    }
 }

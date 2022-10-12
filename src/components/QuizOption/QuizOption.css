@@ -4,6 +4,7 @@
     border: none;
     width: 100%;
     text-align: left;
+    background: transparent;
    
 }
 
@@ -65,3 +66,31 @@
     color: red;
 }
 
+/* responsive for mobile device  */
+
+@media only screen and (max-width: 575.98px) {
+    .quiz-options {
+        margin-bottom: 10px;
+    }
+    .single-quiz-container {
+        padding: 15px;
+       
+    }
+    .quiz-numbers {
+        font-size: 18px;
+   
+    }
+    .quiz-que {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .quiz-alphabet {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+    .quiz-options p {
+        padding: 20px 15px;
+    }
+}

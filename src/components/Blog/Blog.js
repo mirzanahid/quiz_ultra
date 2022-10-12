@@ -6,16 +6,18 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div>
-                <div className='blog-top'>
-                    <p>Blog Questions</p>
-                </div>
-           
+           <div className='quiz-bread blog-top'>
+                <Container>
+                    <p>Question And Answer</p>
+                </Container>
+            </div>
+
             <Container>
                 <Accordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header className='blog-accor-header'>01: What is the purpose of a react router?</Accordion.Header>
                         <Accordion.Body>
-                            React Router is mainly use for define multiple routes in the single page application. When a user 
+                            React Router is mainly use for define multiple routes in the single page application. When a user
                             typed a specific url and if the url matched with the route which is defined in the react router it will  re-direct to particular route
                         </Accordion.Body>
                     </Accordion.Item>

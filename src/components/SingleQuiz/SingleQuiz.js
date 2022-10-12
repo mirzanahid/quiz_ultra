@@ -11,25 +11,23 @@ const SingleQuiz = ({ question, number }) => {
     const [disabled, setDisabled] = useState(false);
     return (
         <div>
-            <Container>
-                <div className='single-quiz-container'>
-                    <div className='questions-container'>
-                        <span className='quiz-numbers'>Quiz-{number + 1}:</span>
-                        <p className='quiz-que'>{question.question}</p>
-                    </div>
-                    <div >
-                        {
-                            options.map((option, idx) => <QuizOption
-                                key={idx}
-                                option={option}
-                                number={idx}
-                                rightAns={rightAns}
-                                disabled={disabled}
-                                setDisabled={setDisabled}></QuizOption>)
-                        }
-                    </div>
+            <div className='single-quiz-container'>
+                <div className='questions-container'>
+                    <span className='quiz-numbers'>Quiz-{number + 1}:</span>
+                    <p className='quiz-que'>{question.question}</p>
                 </div>
-            </Container>
+                <div >
+                    {
+                        options.map((option, idx) => <QuizOption
+                            key={idx}
+                            option={option}
+                            number={idx}
+                            rightAns={rightAns}
+                            disabled={disabled}
+                            setDisabled={setDisabled}></QuizOption>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
