@@ -1,6 +1,6 @@
 # Quiz Ultra
 
-Quiz Ultra is a powerful quiz web site which is prepared your self for any quiz competition.
+Quiz Ultra is a powerful Quiz Web site which is prepared you for any quiz competition.
 
 ## Technology we use to make Quiz Ultra
 
