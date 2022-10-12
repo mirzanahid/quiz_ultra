@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import './Quiz.css';
 import SingleQuiz from '../SingleQuiz/SingleQuiz';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Quiz = () => {
     const quizzes = useLoaderData();
-    const { name, questions } = quizzes.data;
-
+    const { name, questions, total } = quizzes.data;
+    const [count, setCount] = useState({ correct: 0, wrong: 0 });
+    console.log(count);
     return (
         <div>
             <div className='quiz-bread'>
@@ -22,7 +22,14 @@ const Quiz = () => {
                         <Col xl='8' lg='8' >
                             <div className="quiz-question-container">
                                 {
-                                    questions.map((question, index) => <SingleQuiz key={question.id} question={question} number={index}></SingleQuiz>)
+                                    questions.map((question, index) => <SingleQuiz 
+                                    key={question.id} 
+                                    question={question} 
+                                    number={index}
+                                    count={count}
+                                    setCount={setCount}
+
+                                    ></SingleQuiz>)
                                 }
                             </div>
                         </Col>
@@ -30,9 +37,9 @@ const Quiz = () => {
                             <div className="quiz-result-container">
                                 <div className="quiz-res">
                                     <h3 className='quiz-res-heading'>Quiz Results:</h3>
-                                    <p className='quiz-correct'>Total Quiz:</p>
-                                    <p className='quiz-correct'>Correct Ans:</p>
-                                    <p className='quiz-wrong'>Wrong Ans:</p>
+                                    <p className='quiz-correct'>Total Quiz: {total}</p>
+                                    <p className='quiz-correct quiz-corcetc-mid'>Correct Ans: {count.correct}</p>
+                                    <p className='quiz-wrong'>Wrong Ans: {count.wrong}</p>
                                 </div>
                             </div>
                         </Col>

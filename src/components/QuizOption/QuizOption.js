@@ -1,23 +1,19 @@
 import React, { useState } from 'react';
 import './QuizOption.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const QuizOption = (props) => {
-
+    const { option, number, rightAns, setDisabled, disabled, setCount, count } = props;
     const [right, setRight] = useState('');
-   
+
     // const [correct, setCorrect] = useState(0)
-    const { option, number, rightAns, setDisabled, disabled,setCount,count } = props;
-
-    // console.log( correctScore)
-
     const getAns = (option) => {
         setDisabled(true);
         if (rightAns === option) {
-            setCount({...count,correct:count.correct+1});
+            setCount({ ...count, correct: count.correct + 1 });
             setRight('active');
             toast.success('your Ans. is correct', {
                 position: "top-right",
@@ -34,6 +30,7 @@ const QuizOption = (props) => {
         }
         else {
             setRight('wrong');
+            setCount({ ...count, wrong: count.wrong + 1 });
             toast.error('your Ans. is wrong', {
                 position: "top-right",
                 autoClose: 5000,
@@ -45,7 +42,6 @@ const QuizOption = (props) => {
                 theme: "light",
             });
         }
-
     }
 
     const showAns = () => {

@@ -5,12 +5,12 @@ import QuizOption from '../QuizOption/QuizOption';
 import './SingleQuiz.css'
 
 
-const SingleQuiz = ({ question, number }) => {
+const SingleQuiz = ({ question, number, count,setCount }) => {
     const options = question.options;
     const rightAns = question.correctAnswer;
     const [disabled, setDisabled] = useState(false);
-    const [count, setCount] = useState({ correct: 0, wrong: 0 })
- console.log(count)
+
+
     return (
         <div>
             <div className='single-quiz-container'>

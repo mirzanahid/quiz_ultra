@@ -46,7 +46,9 @@
     color: #BF40BF;
     margin-top: 40px;
 }
-
+.quiz-corcetc-mid{
+    margin-top: 20px;
+}
 
 .quiz-wrong {
     font-family: 'Mitr', sans-serif;
