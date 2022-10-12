@@ -9,6 +9,8 @@ const SingleQuiz = ({ question, number }) => {
     const options = question.options;
     const rightAns = question.correctAnswer;
     const [disabled, setDisabled] = useState(false);
+    const [count, setCount] = useState({ correct: 0, wrong: 0 })
+ console.log(count)
     return (
         <div>
             <div className='single-quiz-container'>
@@ -24,7 +26,9 @@ const SingleQuiz = ({ question, number }) => {
                             number={idx}
                             rightAns={rightAns}
                             disabled={disabled}
-                            setDisabled={setDisabled}></QuizOption>)
+                            setDisabled={setDisabled}
+                            setCount={setCount}
+                            count={count}></QuizOption>)
                     }
                 </div>
             </div>

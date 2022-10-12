@@ -2,38 +2,63 @@ import React, { useState } from 'react';
 import './QuizOption.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const QuizOption = (props) => {
 
     const [right, setRight] = useState('');
-    const [icon, setIcon] = useState(true);
-    // const [ans, setAns] = useState({ correct: 0, wrong: 0 })
+   
     // const [correct, setCorrect] = useState(0)
-    const { option, number, rightAns, setDisabled, disabled } = props;
+    const { option, number, rightAns, setDisabled, disabled,setCount,count } = props;
 
     // console.log( correctScore)
 
     const getAns = (option) => {
         setDisabled(true);
         if (rightAns === option) {
+            setCount({...count,correct:count.correct+1});
             setRight('active');
+            toast.success('your Ans. is correct', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+
             // setAns({...ans,correct:ans.correct+1})
         }
         else {
             setRight('wrong');
+            toast.error('your Ans. is wrong', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
         }
 
     }
 
-    const showAll = (option) => {
-
-        console.log(option)
-        setIcon(!icon)
-        if (option !== rightAns) {
-            setRight('wrong');
-        }
+    const showAns = () => {
+        toast.info(`Ans: ${rightAns}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
 
     }
     const num = number;
@@ -48,10 +73,11 @@ const QuizOption = (props) => {
 
     return (
         <div>
-            <span className='eye-icon' onClick={() => showAll(option)}><FontAwesomeIcon icon={icon ? faEye : faEyeSlash} /></span>
+            <span className='eye-icon' onClick={() => showAns()}><FontAwesomeIcon icon={faEye} /></span>
             <button className='quiz-options' disabled={disabled} onClick={() => getAns(option)} >
                 <p className={`${right}`}><span className='quiz-alphabet'>{alphabet}</span> {option}</p>
             </button>
+            <ToastContainer />
         </div>
     );
 };
