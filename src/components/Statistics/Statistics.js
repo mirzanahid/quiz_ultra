@@ -1,11 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import './Statistics.css'
 const Statistics = () => {
     const data = useLoaderData()
-    console.log(data.data)
     return (
         <div className='chart-container'>
             <div className='quiz-bread'>
@@ -24,7 +23,6 @@ const Statistics = () => {
                     </ResponsiveContainer>
                 </div>
             </Container>
-
         </div>
     );
 };

@@ -2,9 +2,6 @@
     margin-bottom: 30px;
 }
 
-
-
-
 button.accordion-button {
     font-family: 'Mitr', sans-serif;
     font-size: 18px;
@@ -38,8 +35,5 @@ button.accordion-button:focus {
 
 }
 
-/* responsive for mobile device */
-@media only screen and (max-width: 575.98px) {
 
-}
 

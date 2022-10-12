@@ -8,7 +8,6 @@ const Quiz = () => {
     const quizzes = useLoaderData();
     const { name, questions, total } = quizzes.data;
     const [count, setCount] = useState({ correct: 0, wrong: 0 });
-    console.log(count);
     return (
         <div>
             <div className='quiz-bread'>
@@ -22,13 +21,12 @@ const Quiz = () => {
                         <Col xl='8' lg='8' >
                             <div className="quiz-question-container">
                                 {
-                                    questions.map((question, index) => <SingleQuiz 
-                                    key={question.id} 
-                                    question={question} 
-                                    number={index}
-                                    count={count}
-                                    setCount={setCount}
-
+                                    questions.map((question, index) => <SingleQuiz
+                                        key={question.id}
+                                        question={question}
+                                        number={index}
+                                        count={count}
+                                        setCount={setCount}
                                     ></SingleQuiz>)
                                 }
                             </div>

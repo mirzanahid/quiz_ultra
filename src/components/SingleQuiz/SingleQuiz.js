@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import Container from 'react-bootstrap/Container';
-import { Link, NavLink } from 'react-router-dom';
 import QuizOption from '../QuizOption/QuizOption';
 import './SingleQuiz.css'
 
 
-const SingleQuiz = ({ question, number, count,setCount }) => {
+const SingleQuiz = ({ question, number, count, setCount }) => {
     const options = question.options;
     const rightAns = question.correctAnswer;
     const [disabled, setDisabled] = useState(false);
-
 
     return (
         <div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const Main = () => {
@@ -7,6 +8,8 @@ const Main = () => {
         <div>
             <Header></Header>
             <Outlet></Outlet>
+            <ScrollRestoration></ScrollRestoration>
+            <ToastContainer />
         </div>
     );
 };

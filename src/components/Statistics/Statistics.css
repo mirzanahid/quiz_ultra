@@ -23,6 +23,7 @@
         height: 305px;
     }
 }
+
 /* responsive for mobile Landscape device  */
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
     .chart {
@@ -31,18 +32,20 @@
         height: 305px;
     }
 }
+
 /* responsive for tablet  device  */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
     .chart {
-        margin: 60px auto 20px  auto;
+        margin: 60px auto 20px auto;
         width: 70%;
         height: 305px;
     }
 }
+
 /* responsive for laptop device  */
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
     .chart {
-        margin: 60px auto 20px  auto;
+        margin: 60px auto 20px auto;
         width: 70%;
         height: 305px;
     }

@@ -22,8 +22,6 @@ const Banner = () => {
                         </div>
                     </Col>
                 </Row>
-
-
             </Container>
         </div>
     );

@@ -7,7 +7,6 @@
     text-align: center;
 }
 
-
 .error-number {
     font-family: 'Mitr', sans-serif;
     font-size: 200px;
@@ -44,8 +43,6 @@
 }
 
 
-
-
 /* responsive for mobile  device  */
 @media only screen and (max-width: 575.98px) {
     .error-number {
@@ -59,7 +56,6 @@
     .error-message {
         font-size: 17px;
         width: 300px;
-
     }
 
     .error-go-home-btn {
@@ -76,6 +72,5 @@
 
     .error-message {
         width: 300px;
-
     }
 }

@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import './QuizOption.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const QuizOption = (props) => {
     const { option, number, rightAns, setDisabled, disabled, setCount, count } = props;
     const [right, setRight] = useState('');
-
-    // const [correct, setCorrect] = useState(0)
     const getAns = (option) => {
         setDisabled(true);
         if (rightAns === option) {
             setCount({ ...count, correct: count.correct + 1 });
             setRight('active');
-            toast.success('your Ans. is correct', {
+            toast.success('Your Ans. is Correct', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -25,13 +23,11 @@ const QuizOption = (props) => {
                 progress: undefined,
                 theme: "light",
             });
-
-            // setAns({...ans,correct:ans.correct+1})
         }
         else {
             setRight('wrong');
             setCount({ ...count, wrong: count.wrong + 1 });
-            toast.error('your Ans. is wrong', {
+            toast.error('Your Ans. is Wrong', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -55,7 +51,6 @@ const QuizOption = (props) => {
             progress: undefined,
             theme: "light",
         });
-
     }
     const num = number;
     const indexToAlpha = (num = 1) => {
@@ -73,7 +68,6 @@ const QuizOption = (props) => {
             <button className='quiz-options' disabled={disabled} onClick={() => getAns(option)} >
                 <p className={`${right}`}><span className='quiz-alphabet'>{alphabet}</span> {option}</p>
             </button>
-            <ToastContainer />
         </div>
     );
 };
