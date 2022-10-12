@@ -32,16 +32,13 @@
     color: #2f2e29;
 }
 
-
-
-
-/* responsive for mobile device  */
-
+/* responsive for mobile  device  */
 @media only screen and (max-width: 575.98px) {
-    .banner{
+    .banner {
         height: auto;
         padding-bottom: 0;
     }
+
     .banner-text {
         padding-top: 40px;
         margin-bottom: 50px;
@@ -55,7 +52,6 @@
 
     .banner-top-text {
         font-size: 18px;
-
     }
 
     .banner-heading {
@@ -65,4 +61,96 @@
         line-height: 35px;
     }
 
+}
+
+/* responsive for mobile Landscape device  */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    .banner {
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .banner-text {
+        padding-top: 40px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-top-text {
+        font-size: 20px;
+
+    }
+
+    .banner-heading {
+        font-size: 42px;
+        margin: 15px auto;
+        width: 390px;
+        line-height: 42px;
+    }
+}
+
+/* responsive for laptop device  */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .banner {
+        height: 380px;
+        padding-bottom: 0;
+        padding-top: 40px;
+    }
+
+    .banner-text {
+        padding-top: 45px;
+        margin-bottom: 0;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-top-text {
+        font-size: 20px;
+    }
+
+    .banner-heading {
+        font-size: 32px;
+        margin: 10px 0;
+        width: 290px;
+        line-height: 35px;
+    }
+}
+
+/* responsive for laptop device  */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .banner {
+        height: 550px;
+        padding-bottom: 0;
+        padding-top: 40px;
+    }
+
+    .banner-text {
+        padding-top: 90px;
+        margin-bottom: 0;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-top-text {
+        font-size: 20px;
+    }
+
+    .banner-heading {
+        font-size: 44px;
+        margin-top: 4px;
+        margin-bottom: 15px;
+        width: 460px;
+        line-height: 48px;
+    }
 }

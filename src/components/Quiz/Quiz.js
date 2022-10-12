@@ -16,29 +16,29 @@ const Quiz = () => {
                     <p>Quiz Of <span>{name}</span></p>
                 </Container>
             </div>
-                <div className="quiz-container">
-                    <Container>
-                        <Row>
-                            <Col xl='8' >
-                                <div className="quiz-question-container">
-                                    {
-                                        questions.map((question, index) => <SingleQuiz key={question.id} question={question} number={index}></SingleQuiz>)
-                                    }
+            <div className="quiz-container">
+                <Container>
+                    <Row>
+                        <Col xl='8' lg='8' >
+                            <div className="quiz-question-container">
+                                {
+                                    questions.map((question, index) => <SingleQuiz key={question.id} question={question} number={index}></SingleQuiz>)
+                                }
+                            </div>
+                        </Col>
+                        <Col xl='4' lg='4'>
+                            <div className="quiz-result-container">
+                                <div className="quiz-res">
+                                    <h3 className='quiz-res-heading'>Quiz Results:</h3>
+                                    <p className='quiz-correct'>Total Quiz:</p>
+                                    <p className='quiz-correct'>Correct Ans:</p>
+                                    <p className='quiz-wrong'>Wrong Ans:</p>
                                 </div>
-                            </Col>
-                            <Col xl='4'>
-                                <div className="quiz-result-container">
-                                    <div className="quiz-res">
-                                        <h3 className='quiz-res-heading'>Quiz Results:</h3>
-                                        <p className='quiz-correct'>Total Quiz:</p>
-                                        <p className='quiz-correct'>Correct Ans:</p>
-                                        <p className='quiz-wrong'>Wrong Ans:</p>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 };

@@ -11,8 +11,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <div className='navbar-container'>
-      <Navbar  className='quiz-navbar' expand="lg">
+      <Navbar className='quiz-navbar' expand="lg">
         <Container>
           <Navbar.Brand > <Link to={'/'} className='logo'> <img className='logo-icon' src={logo} alt="" /> Quiz Ultra</Link> </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav"><FontAwesomeIcon className='bar-icon' icon={faBars}></FontAwesomeIcon></Navbar.Toggle>
@@ -26,7 +25,6 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
   );
 };
 

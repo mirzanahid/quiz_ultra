@@ -1,41 +1,45 @@
-.single-topic{
+.single-topic {
     background: #b0d861;
     border: 2px solid #f3f3f3;
     border-radius: 10px;
-    
- 
+
+
 }
-.single-topic-top{
+
+.single-topic-top {
     border-bottom: 2px solid #f3f3f3;
-  padding: 20px;
+    padding: 20px;
 }
-.single-topic-info{
+
+.single-topic-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
-.logo-container img{
+.logo-container img {
     background-color: #cf95ec;
     width: 120px;
     border-radius: 50%;
 }
 
-.topic-heading{
+.topic-heading {
     font-family: 'Mitr', sans-serif;
     font-size: 24px;
     font-weight: 600;
     margin-top: 10px;
     color: #fff;
 }
-.topic-quiz{
+
+.topic-quiz {
     font-family: 'Mitr', sans-serif;
     font-size: 16px;
     color: #fff;
     margin-bottom: 0;
 }
-.topic-btn{
+
+.topic-btn {
     font-family: 'Mitr', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -44,4 +48,13 @@
     color: #fff;
     padding: 8px 30px;
     border-radius: 5px;
+}
+
+
+/* responsive for mobile device  */
+
+@media only screen and (max-width: 575.98px) {
+    .logo-container img {
+        width: 90px;
+    }
 }
