@@ -41,10 +41,10 @@ function App() {
           path: 'blog',
           element: <Blog></Blog>
         },
-
       ],
       errorElement: <Error></Error>
     },
+
   ])
   return (
     <div className="App">

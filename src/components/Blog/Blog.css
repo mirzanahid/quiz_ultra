@@ -1,3 +1,7 @@
+.blog-container {
+    padding-bottom: 50px;
+}
+
 .blog-top {
     margin-bottom: 30px;
 }
@@ -31,9 +35,6 @@ button.accordion-button:focus {
     font-weight: 500;
     color: #2f2e29;
     display: inline-block;
-    
+
 
 }
-
-
-
