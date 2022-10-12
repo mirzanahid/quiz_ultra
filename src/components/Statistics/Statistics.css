@@ -1,0 +1,13 @@
+.chart-container{
+ text-align: center;
+}
+.chart{
+    margin: 60px auto 20px auto;
+    width: 50%;
+    height: 300px;
+}
+.recharts-text{
+    font-family: 'Mitr',sans-serif;
+    font-size: 20px;
+    color: #2f2e29;
+}

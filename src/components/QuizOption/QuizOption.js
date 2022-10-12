@@ -31,10 +31,10 @@ const QuizOption = (props) => {
 
         console.log(option)
         setIcon(!icon)
-        if(option !== rightAns){
+        if (option !== rightAns) {
             setRight('wrong');
         }
-       
+
     }
     const num = number;
     const indexToAlpha = (num = 1) => {
@@ -48,7 +48,7 @@ const QuizOption = (props) => {
 
     return (
         <div>
-            <span className='eye-icon' onClick={() => showAll(option)}><FontAwesomeIcon icon={icon ? faEye: faEyeSlash } /></span>
+            <span className='eye-icon' onClick={() => showAll(option)}><FontAwesomeIcon icon={icon ? faEye : faEyeSlash} /></span>
             <button className='quiz-options' disabled={disabled} onClick={() => getAns(option)} >
                 <p className={`${right}`}><span className='quiz-alphabet'>{alphabet}</span> {option}</p>
             </button>
